@@ -14,6 +14,12 @@ const app = express();
 //permet à l'application de lire (désérialiser) du json
 app.use(json());
 
+app.use((req, res, next) => {
+    console.log('Je passe par ici')
+    //next() permet de passer à l'étape suivante (middleware)
+    next();
+});
+
 app.use(routes);
 
 //écouter le port 3000

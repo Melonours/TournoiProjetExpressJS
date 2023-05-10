@@ -17,13 +17,12 @@ routes.route('/tournoi')
 routes.route('/tournoi/:id/start')
     .patch(TournoiController.start)
 
+routes.route('/inscription')
+    .post(InscriptionController.create)
 
 routes.route('/joueur')
     .post(JoueurController.create)
 
-
-routes.route('/inscription')
-    .post(InscriptionController.create)
 // http request
 // - headers (meta données de la requete)
 // - body (données de la requete)
